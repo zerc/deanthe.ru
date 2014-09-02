@@ -1,4 +1,5 @@
 from deanthe import app, manager, db
+import urls
 
 @manager.command
 def runserver():
