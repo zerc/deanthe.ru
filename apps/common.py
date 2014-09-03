@@ -31,3 +31,10 @@ def is_admin(f):
 		return f(*args, **kwargs)
 	return decorated_function
 	
+def login_required(f):
+	@wraps(f)
+	def decorated_function(*args, **kwargs):
+		if g.user is None:
+			return redirect(url_for('users_login'))
+		return f(*args, **kwargs)
+	return decorated_function
