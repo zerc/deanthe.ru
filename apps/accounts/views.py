@@ -1,5 +1,5 @@
 ﻿from apps.common import *
-from apps.users.models import User
+from apps.accounts.models import User
 from flask import request, session, redirect, url_for, g
 
 @templated('accounts/login.html')
