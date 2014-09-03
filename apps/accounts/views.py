@@ -2,7 +2,7 @@
 from apps.users.models import User
 from flask import request, session, redirect, url_for, g
 
-@templated('users/login.html')
+@templated('accounts/login.html')
 def users_login():
 	title = 'Авторизация'
 	error = None
