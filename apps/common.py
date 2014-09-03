@@ -1,6 +1,6 @@
 from deanthe import app
 from functools import wraps
-from flask import request, render_template, g, session
+from flask import request, render_template, g, session, redirect, url_for
 
 @app.before_request
 def load_user():
