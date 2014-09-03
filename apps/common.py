@@ -27,7 +27,7 @@ def is_admin(f):
 	@wraps(f)
 	def decorated_function(*args, **kwargs):
 		if g.user.role != 'admin':
-			return redirect(url_for('users_login'))
+			return redirect(url_for('accounts_login'))
 		return f(*args, **kwargs)
 	return decorated_function
 	
