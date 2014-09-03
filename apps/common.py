@@ -1,3 +1,4 @@
+from deanthe import app
 from functools import wraps
 from flask import request, render_template, g, session
 
