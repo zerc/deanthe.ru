@@ -17,7 +17,7 @@ def accounts_login():
 			if user.check_password(inputPassword):
 				session['user'] = user.id
 				g.user = user
-				return redirect(request.args.get('next') or url_for('users_login'))
+				return redirect(request.args.get('next') or url_for('accounts_login'))
 			else:
 				error = err_msg_1
 		else:
