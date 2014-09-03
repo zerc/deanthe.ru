@@ -1,5 +1,10 @@
 from functools import wraps
-from flask import request, render_template
+from flask import request, render_template, g, session
+
+@app.before_request
+def load_user():
+	from apps.users.models import User
+	g.user = User.query.filter(User.id == session['user']).first() if 'user' in session else None
 
 def templated(template = None):
 	def decorator(f):
