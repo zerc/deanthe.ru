@@ -3,7 +3,7 @@ from apps.accounts.models import User
 from flask import request, session, redirect, url_for, g
 
 @templated('accounts/login.html')
-def users_login():
+def accounts_login():
 	title = 'Авторизация'
 	error = None
 	err_msg = 'Неверный логин или пароль.'
